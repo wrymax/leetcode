@@ -1,0 +1,4 @@
+Palo ALto,San Francisco,Los Angeles,Las Vagas
+San Francisco,Las Vagas,Palo ALto
+Las Vagas,Palo ALto,San Francisco,Los Angeles
+Los Angeles,Las Vagas,Palo ALto
