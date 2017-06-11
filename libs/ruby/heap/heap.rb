@@ -12,4 +12,9 @@ class Heap
     end
   end
 
+  def heapify_from_tail
+    error = Exception.new("heapify_from_tail is not implemented!")
+    raise error
+  end
+
 end

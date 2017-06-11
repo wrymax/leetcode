@@ -1,4 +1,3 @@
-require 'pry'
 load './heap.rb'
 
 class MaxHeap < Heap

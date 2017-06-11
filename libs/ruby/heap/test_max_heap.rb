@@ -12,6 +12,19 @@ end
 
 can_build_heap
 
+def can_build_heap_1
+  elements = [35, 33, 42, 10, 14, 19, 27, 44, 26, 31]
+  max_heap = MaxHeap.new(elements)
+  if max_heap.elements == [44, 42, 35, 33, 31, 19, 27, 10, 26, 14]
+    puts "+ MaxHeap is correctly built"
+  else
+    puts "- MaxHeap was built wrongly"
+  end
+end
+
+can_build_heap_1
+
+
 def count_plus_one_after_insert
   elements = [3, 6, 5, 1, 12, 6, 8]
   max_heap = MaxHeap.new(elements)
