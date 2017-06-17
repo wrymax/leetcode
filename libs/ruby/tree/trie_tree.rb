@@ -21,8 +21,16 @@ class TrieTree
 
 
   # initialize with a root node
-  def initialize
+  def initialize(dictionary=nil)
     self.root = TreeNode.new
+
+    if dictionary
+      raise Exception.new("parameter dictionary should be an Array of words!") unless dictionary.is_a?(Array)
+
+      dictionary.each do |word|
+        self.insert(word)
+      end
+    end
   end
 
   # insert a word into TrieTree

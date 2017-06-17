@@ -1,5 +1,22 @@
 load './trie_tree.rb'
 
+def test_initialize
+  tree = TrieTree.new(["cat", "cat", "yes", "no"])
+
+  begin
+    count1 = tree.search('cat')
+    count2 = tree.search('yes')
+    count3 = tree.search('no')
+    if count1 == 2 && count2 == 1 && count3 == 1
+      puts "+ insert passeds!"
+    else
+      puts "- insert failed!"
+    end
+  rescue
+    puts "- TrieTree was not correctly built by array of words"
+  end
+end
+
 def test_insert
   tree = TrieTree.new
   tree.insert('cat')
@@ -24,7 +41,8 @@ def test_search
     'car' => 1, 
     'mouse' => 1, 
     'alphabet' => 1, 
-    'phenomenon' => 1
+    'phenomenon' => 1, 
+    'category' => 10
   }
   tree = TrieTree.new
   data.each_pair do |k, v|
