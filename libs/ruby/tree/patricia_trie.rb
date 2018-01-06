@@ -37,6 +37,7 @@ Main functions:
 =end
 
 class PatriciaTrie
+  # class for nodes in the trie
   class Node
     attr_accessor :string, :children, :parent, :leaf
     
@@ -46,11 +47,6 @@ class PatriciaTrie
       self.leaf = false
       self.children = {}
     end
-    
-    # is this a leaf node?
-    # def leaf?
-    #   children.empty? || children['nil']
-    # end
   end
   
   attr_accessor :root
@@ -177,6 +173,8 @@ class PatriciaTrie
     
     print_node(node, "> ")
   end
+  
+  private
   
   def print_node(node, prefix="")
     suffix = node.leaf ? "(this is a leaf, a word ends here)" : ""
