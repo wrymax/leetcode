@@ -22,6 +22,7 @@ class Solution:
             else:
                 j -= 1
         return current_highest
+    
         
 #### Test
 s = Solution()
